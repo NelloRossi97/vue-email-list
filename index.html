@@ -11,15 +11,28 @@
         <title>Vue Email List</title>
     </head>
     <body>
-        <div id="app">
-            <div class="container">
-                <h1>Emails</h1>
-                <button @click="getEmails">Genera email</button>
-                <ul v-if="emails.length === 10">
+        <div id="app" class="d-flex justify-content-center align-items-center bg-dark vh-100">
+            <div class="container bg-dark-subtle rounded-5 text-center w-auto">
+                <h1 class="text-center my-3">Emails</h1>
+                <button @click="getEmails" class="btn btn-primary mb-3">Genera email</button>
+                <ul v-if="emails.length === 10" class="list-unstyled mb-3">
                     <li v-for="email in emails">{{email}}</li>
                 </ul>
-                </div>
-            
+            </div>
+            <div class="container bg-dark-subtle rounded-5 text-center w-auto">
+                <h1 class="text-center my-3">Parole</h1>
+                <button @click="getWords" class="btn btn-success mb-3">Genera parole</button>
+                <ul v-if="words.length === 10" class="list-unstyled mb-3">
+                    <li v-for="word in words">{{word}}</li>
+                </ul>
+            </div>
+            <div class="container bg-dark-subtle rounded-5 text-center w-auto">
+                <h1 class="text-center my-3">Numeri</h1>
+                <button @click="getNumbers" class="btn btn-warning mb-3">Genera Numeri</button>
+                <ul v-if="numbers.length === 10" class="list-unstyled mb-3">
+                    <li v-for="number in numbers">{{number}}</li>
+                </ul>
+            </div>
         </div>
         
         <script src="./js/script.js"></script>
